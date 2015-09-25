@@ -1,0 +1,6 @@
+spring:
+    datasource:
+      url: jdbc:mysql://192.168.5.89:3306/cf_a5dc7094_3180_4ba5_ad95_a98c11391f6d?user=XTf5V5mUe5LJz6eU&password=1CZEVLYKqyW6OcYE
+      username: XTf5V5mUe5LJz6eU
+      password: 1CZEVLYKqyW6OcYE
+      driver-class-name: com.mysql.jdbc.Driver

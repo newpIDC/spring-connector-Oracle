@@ -1,0 +1,44 @@
+mvn install:install-file -Dfile=/home/pivotal/Downloads/ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0 -Dpackaging=jar
+
+create table wells_test (
+  da_field varchar2(32)
+);
+
+insert into wells_test (da_field) values ('abc');
+insert into wells_test (da_field) values ('123');
+
+
+cf cups my-ora -p '{"jdbcUrl":"jdbc:oracle:thin:pivotal/Pivotal1!@smd-ora-test.cvdxit8mtrph.us-east-1.rds.amazonaws.com:1521:ORCL"}'
+cf cups my-ora -p '{"uri":"oracle://pivotal/Pivotal1!@smd-ora-test.cvdxit8mtrph.us-east-1.rds.amazonaws.com:1521:ORCL"}'
+
+
+//Joel
+"user-provided": [
+  {
+    "name": "oracle-wima",
+    "label": "user-provided",
+    "tags": [],
+    "credentials": {
+      "dbname": "w572ur1",
+      "host": "wuprd01a0052.wellsfargo.com",
+      "password": "pwd removed from email"
+      "port": "1528",
+      "username": "CEOWIMA_APP"
+    },
+    "syslog_drain_url": ""
+  }
+]
+
+//MySQL Service
+          "credentials": {
+            "hostname": "192.168.5.89",
+            "port": 3306,
+            "name": "cf_a5dc7094_3180_4ba5_ad95_a98c11391f6d",
+            "username": "SBHdRmjRiQcGjv7M",
+            "password": "xOhIHikWrTlwlXnO",
+            "uri": "mysql://SBHdRmjRiQcGjv7M:xOhIHikWrTlwlXnO@192.168.5.89:3306/cf_a5dc7094_3180_4ba5_ad95_a98c11391f6d?reconnect=true",
+            "jdbcUrl": "jdbc:mysql://192.168.5.89:3306/cf_a5dc7094_3180_4ba5_ad95_a98c11391f6d?user=SBHdRmjRiQcGjv7M&password=xOhIHikWrTlwlXnO"
+          }
+
+          
+oracle://pivotal/Pivotal1!@smd-ora-test.cvdxit8mtrph.us-east-1.rds.amazonaws.com:1521:ORCL

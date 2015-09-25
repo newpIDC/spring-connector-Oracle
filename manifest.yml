@@ -1,0 +1,11 @@
+---
+instances: 1
+memory: 512M
+applications:
+  - name: cups-ora
+    host: cups-ora
+    path: target/cups-ora-0.0.1-SNAPSHOT.jar
+    services:
+      - my-ora
+#    env:
+#      SPRING_PROFILES_ACTIVE: cloud-foundry
