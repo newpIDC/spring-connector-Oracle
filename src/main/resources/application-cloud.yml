@@ -1,4 +1,5 @@
-spring:
+
+#spring:
 #    datasource:
 #      host: 
 #      url: jdbc:oracle:thin:pivotal/Pivotal1!@smd-ora-test.cvdxit8mtrph.us-east-1.rds.amazonaws.com:1521:ORCL

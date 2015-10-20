@@ -1,3 +1,9 @@
+
+//RDS with mysql to test basic idea
+cf cups mysqlDS -p '{"jdbcUrl":"jdbc:mysql://rivals-forum-poc.cvdxit8mtrph.us-east-1.rds.amazonaws.com:3306/cal?user=rivals&password=Rivals1!"}'
+cf cups mysqlDS2 -p '{"jdbcUrl":"jdbc:mysql://rivals-forum-poc.cvdxit8mtrph.us-east-1.rds.amazonaws.com:3306/cal?user=rivals&password=Rivals1!"}'
+
+//Install oracle driver into local mvn
 mvn install:install-file -Dfile=/home/pivotal/Downloads/ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0 -Dpackaging=jar
 
 create table wells_test (
@@ -28,6 +34,7 @@ cf cups my-ora -p '{"uri":"oracle://pivotal/Pivotal1!@smd-ora-test.cvdxit8mtrph.
     "syslog_drain_url": ""
   }
 ]
+
 
 //MySQL Service
           "credentials": {

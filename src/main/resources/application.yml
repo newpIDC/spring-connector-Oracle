@@ -1,4 +1,15 @@
-debug: true
+#debug: true
+
+pool:
+  size:
+    min: 5
+    max: 10
+  wait:
+    time: 3000
+  validation:
+    testOnBorrow: false
+    testOnCreate: true
+    query: select 1
 
 spring:
   profiles:
